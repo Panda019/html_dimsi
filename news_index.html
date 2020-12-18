@@ -1,0 +1,457 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Новости</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- Cброс стилей -->
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/jquery-1.8.2.min.js"></script>
+    <script src="js/prefixfree.min.js"></script>
+    <!-- автоперфиксы "-moz-", "-webkit-" и др. -->
+    <script src="js/jquery.bxslider.min.js"></script>
+    <!-- плагин для слайдеров -->
+    <script src="js/jquery.mousewheel.js"></script>
+    <!-- Скролл мышью -->
+    <script src="js/jquery.jscrollpane.min.js"></script>
+    <!-- Скролл -->
+    <script src="js/masonry.pkgd.min.js"></script>
+    <!-- Размешение блоков как pinterest -->
+    <script src="js/effects.js"></script>
+    <!-- Файл со всеми эффектами js -->
+    <script src="js/placeholders.js"></script>
+    <!--<script src="//vk.com/js/api/openapi.js?105"></script>-->
+    <script type="text/javascript" src="js/jquery.liTextLength.js"></script>
+    <script type="text/javascript" language="javascript" src="js/jquery.dotdotdot.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.limit-latest-news').liTextLength({
+                length:50, //Видимое кол-во символов
+                afterLength:'...', //Текст после видимого содержания
+                fullText:false //Добавить ссылку для отображения скрытого текста
+            });
+            $('.limit-breadcrumbs').liTextLength({
+                length:105, //Видимое кол-во символов
+                afterLength:'...', //Текст после видимого содержания
+                fullText:false //Добавить ссылку для отображения скрытого текста
+            });
+        })
+    </script>
+    <script type="text/javascript" language="javascript">
+        $(function () {
+            $('.limit-test').dotdotdot();
+            $('.limit-progects').dotdotdot();
+        });
+
+    </script>
+    <script src="js/jquery.ezmark.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('.input-set input').ezMark();
+        });
+    </script>
+</head>
+<body>
+<div class="header-wrap">
+    <div class="header"><a href="#"><span class="logo"></span> </a> <!-- logo -->
+        <div class="menu-container">
+            <ul class="menu">
+                <li><a href="#">О нас</a></li>
+                <li><a href="#">Проекты</a></li>
+                <li><a href="#">Услуги</a></li>
+                <li><a href="#">Пройти тест</a></li>
+                <li><a href="#">Материалы</a></li>
+                <li class="active"><a href="#">Новости</a></li>
+            </ul>
+            <!-- menu -->
+        </div>
+        <!-- menu-container -->
+        <div class="contacts"><span class="phone">+7 (916) 554-12-33</span> <a href="#"
+                                                                               class="contact-information blue-button">
+            <span class="img"></span> <span>Контактная информация</span> </a>
+            <!-- contact-information -->
+        </div>
+        <!-- contacts -->
+    </div>
+    <!-- header -->
+
+</div>
+<div class="latest-news-panel"><span class="latest-news-title">Свежие новости:</span>
+
+    <div class="latest-news-container">
+        <ul class="latest-news">
+            <li><a href="#"> <span class="title limit-latest-news">Далеко-далеко за словесными горами. Далеко-далеко за словесными горами.</span>
+                <span class="date">17.10.2013</span> </a></li>
+            <li><a href="#"> <span class="title limit-latest-news">17 сентября ДИМСИ исполнилось 18 лет! Далеко-далеко за словесными горами.</span>
+                <span class="date">17.10.2013</span> </a></li>
+            <li><a href="#"> <span class="title limit-latest-news">Заголовок третьей новости. Далеко-далеко за словесными горами.</span>
+                <span class="date">17.10.2013</span> </a></li>
+        </ul>
+        <!-- latest-news -->
+    </div>
+    <!-- latest-news-container -->
+    <div class="search-container">
+        <div class="search">
+            <form action="#">
+                <input type="text" class="search-text" placeholder="Поиск по сайту">
+                <input type="submit" value="" class="search-submit">
+            </form>
+        </div>
+        <!-- search -->
+    </div>
+    <!-- search-container -->
+</div>
+<!-- latest-news-panel -->
+
+<div class="content-wrap clearfix">
+<div class="content"><!-- projects-container -->
+    <div class="main-content-container">
+        <div class="main-content-wrap">
+            <div class="main-content">
+                <h1>Новости и события</h1>
+                <!-- main-content-title -->
+
+                <div><span class="news-title"> <a href="#">На льдине находился один рыбак-любитель</a> </span>
+                    <img src="img/content-img-1.png" alt="" class="align-left">В марте 2014 года планируется
+                    запустить мобильное приложение, с помощью которого можно будет узнать о маршрутах движения и
+                    времени прибытия наземного общественного транспорта Москвы, сообщает “М24” со ссылкой на
+                    главу департамента транспорта и развития дорожно-транспортной инфраструктуры Максима
+                    Ликсутова.
+                    По его слова, в течение месяца это приложение будет тестироваться, а в марте будет запущено
+                    в работу, и им сможет воспользоваться каждый житель Москвы. Помимо этого, в этом году начнёт
+                    работать центр по отслеживанию наземного транспорта с использованием системы ГЛОНАСС. <span
+                            class="date-time"> <span class="date-time-item">16 декабря 2013 г.</span> <span
+                            class="date-time-item">24:45:57</span> </span></div>
+                <hr>
+                <div><span class="news-title"> <a href="#">Далеко-далеко за словесными горами в стране гласных и
+                    согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика
+                    большого языкового океана.</a> </span> Маленький ручеек Даль журчит по всей стране и
+                    обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна, в которой
+                    жаренные члены предложения залетают прямо в рот. Даже всемогущая пунктуация не имеет власти
+                    над рыбными текстами, ведущими безорфографичный образ жизни. Однажды одна маленькая строчка
+                    рыбного текста по имени Lorem ipsum решила выйти в большой мир грамматики. <span
+                            class="date-time"> <span class="date-time-item">16 декабря 2013 г.</span> <span
+                            class="date-time-item">24:45:57</span> </span></div>
+                <hr>
+                <div><span class="news-title"> <a href="#">Великий Оксмокс предупреждал ее о злых запятых, диких
+                    знаках вопроса и коварных точках с запятой, но текст не дал сбить себя с толку.</a> </span>
+                    <img src="img/content-img-2.png" alt="" class="align-left">Он собрал семь своих заглавных
+                    букв, подпоясал инициал за пояс и пустился в дорогу. Взобравшись на первую вершину курсивных
+                    гор, бросил он последний взгляд назад, на силуэт своего родного города Буквоград, на
+                    заголовок деревни Алфавит и на подзаголовок своего переулка Строчка. Грустный реторический
+                    вопрос скатился по его щеке и он продолжил свой путь. По дороге встретил текст рукопись. Она
+                    предупредила его: «В моей стране все переписывается по несколько раз. Единственное, что от
+                    меня осталось, это приставка «и». <span class="date-time clearfix"> <span
+                            class="date-time-item">16 декабря 2013 г.</span> <span
+                            class="date-time-item">24:45:57</span> </span>
+                </div>
+                <hr>
+                <div><span class="news-title"> <a href="#">Он собрал семь своих заглавных букв, подпоясал
+                    инициал за пояс и пустился в дорогу.</a> </span> <img src="img/content-img-3.png" alt=""
+                                                                          class="align-left">Возвращайся ты
+                    лучше в свою безопасную страну». Не послушавшись рукописи, наш текст продолжил свой путь.
+                    Вскоре ему повстречался коварный составитель рекламных текстов, напоивший его языком и речью
+                    и заманивший в свое агенство, которое использовало его снова и снова в своих проектах. И
+                    если его не переписали, то живет он там до сих пор. Далеко-далеко за словесными горами в
+                    стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на
+                    берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и
+                    обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна, в которой
+                    жаренные члены предложения залетают прямо в рот. Даже всемогущая пунктуация не имеет власти
+                    над рыбными текстами, ведущими безорфографичный образ жизни. <span class="date-time"> <span
+                            class="date-time-item">16 декабря 2013 г.</span> <span
+                            class="date-time-item">24:45:57</span> </span>
+                </div>
+                <hr>
+                <div><span class="news-title"> <a href="#"> Грустный реторический вопрос скатился по его щеке и
+                    он продолжил свой путь.</a> </span> <img src="img/content-img-4.png" alt=""
+                                                             class="align-left">По дороге встретил текст
+                    рукопись. Она предупредила его: «В моей стране все переписывается по несколько раз.
+                    Единственное, что от меня осталось, это приставка «и». Возвращайся ты лучше в свою
+                    безопасную страну». Не послушавшись рукописи, наш текст продолжил свой путь. Вскоре ему
+                    повстречался коварный составитель рекламных текстов, напоивший его языком и речью и
+                    заманивший в свое агенство, которое использовало его снова и снова в своих проектах. И если
+                    его не переписали, то живет он там до сих пор. Далеко-далеко за словесными горами в стране
+                    гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу
+                    Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и
+                    обеспечивает ее всеми необходимыми правилами. <span class="date-time"> <span
+                            class="date-time-item">16 декабря 2013 г.</span> <span
+                            class="date-time-item">24:45:57</span> </span>
+                </div>
+            </div>
+            <div class="paginator-wrap-bottom clearfix">
+                <div class="paginator"><a href="#" class="arrow-page" title="Предыдущая">&larr; Предыдущая</a>
+                    <span class="this-page" title="1">1</span> <a href="#" title="2">2</a> <span
+                            class="break">...</span>
+                    <a href="#" title="3">3</a> <a href="#" title="4">4</a> <a href="#" title="5">5</a> <a
+                            href="#" title="6">6</a> <a href="#" title="3">7</a> <span class="break">...</span>
+                    <a href="#" class="arrow-page" title="Следующая">Следующая &rarr;</a></div>
+            </div>
+        </div>
+
+        <!-- main-content -->
+        <div class="content-menu-container">
+            <div class="content-menu-title"><span>Разделы</span></div>
+            <ul class="content-menu">
+                <li class="active"><a href="#">
+                    <div><span>Все новости</span></div>
+                </a></li>
+                <li><a href="#">
+                    <div><span>Предстоящие новости</span></div>
+                </a></li>
+                <li><a href="#">
+                    <div><span>Новости проектов</span></div>
+                </a></li>
+                <li><a href="#">
+                    <div><span>Материалы</span></div>
+                </a></li>
+                <li><a href="#">
+                    <div><span>События</span></div>
+                </a></li>
+                <li><a href="#">
+                    <div><span>Отчеты</span></div>
+                </a></li>
+                <li><a href="#">
+                    <div><span>Вакансии</span></div>
+                </a></li>
+            </ul>
+            <div class="content-menu-title"><span>Проекты</span></div>
+            <ul class="content-menu">
+                <li><a href="#">
+                    <div><span>Город-Бизнес-НКО</span></div>
+                </a></li>
+                <li class="active"><a href="#">
+                    <div><span>Мативатор24</span></div>
+                </a></li>
+                <li><a href="#">
+                    <div><span>Дизайнеры успеха</span></div>
+                </a></li>
+            </ul>
+            <div class="content-menu-title"><span>Авторы</span></div>
+            <ul class="content-menu">
+                <li><a href="#">
+                    <div><span>Василий Петрович</span></div>
+                </a></li>
+                <li><a href="#">
+                    <div><span>Геннадий Дмитрич</span></div>
+                </a></li>
+                <li><a href="#">
+                    <div><span>Николай Валуев</span></div>
+                </a></li>
+            </ul>
+
+            <!-- content-menu -->
+        </div>
+        <!-- content-menu-container-->
+    </div>
+    <div class="share-social-bottom">
+        <div class="share-social">
+            <div class="share-social-title">Поделиться:</div>
+            <div class="share-social-item"><a href="#"><img src="img/social-cap-1.png" width="52"
+                                                            height="18"></a></div>
+            <div class="share-social-item"><a href="#"><img src="img/social-cap-2.png" width="43"
+                                                            height="18"></a></div>
+            <div class="share-social-item"><a href="#"><img src="img/social-cap-3.png" width="43"
+                                                            height="18"></a></div>
+            <div class="share-social-item"><a href="#"><img src="img/social-cap-4.png" width="43"
+                                                            height="18"></a></div>
+        </div>
+    </div>
+    <ul class="breadcrumbs clearfix">
+        <li><a href="#"><span>Главная</span></a></li>
+        <li><a href="#"><span>Проекты ДИМСИ</span></a></li>
+        <li>Город-Бизнес-НКО</li>
+    </ul>
+</div>
+<!-- content -->
+
+<div class="right-sidebar">
+    <div class="private-office-container">
+        <div class="private-office-inner">
+            <div class="private-office">
+                <div class="user-name-container">
+                    <div class="user-photo"><a href="#"><img src="img/user-photo.png" alt=""></a></div>
+                    <a href="#"><span class="user-name">Кондрат Кондратьев</span></a></div>
+                <!-- user-name-container -->
+
+                <ul class="user-menu">
+                    <li><a href="#" class="active">
+                        <div class="icon"></div>
+                        <div class="text"><span>Личные данные</span></div>
+                    </a></li>
+                    <li><a href="#">
+                        <div class="icon"></div>
+                        <div class="text"><span>Мои тесты</span></div>
+                    </a></li>
+                    <li><a href="#">
+                        <div class="icon"></div>
+                        <div class="text"><span>Получить консультацию</span></div>
+                    </a></li>
+                    <li class="drop-item"><a href="#">
+                        <div class="icon"></div>
+                        <div class="text"><span>Мои инициативы</span></div>
+                        <div class="icon_2"></div>
+                    </a>
+                        <ul class="sub-menu">
+                            <li><a href="#"><span>Вступить в ДИМСИ</span></a></li>
+                            <li><a href="#"><span>Присвоение статуса</span></a></li>
+                            <li><a href="#"><span>Сдать отчёты</span></a></li>
+                            <li><a href="#"><span>Стать партнером</span></a></li>
+                        </ul>
+                        <!-- sub-menu -->
+                    </li>
+                    <li class="last"><a href="#">
+                        <div class="icon"></div>
+                        <div class="text"><span>Выход</span></div>
+                    </a></li>
+                </ul>
+                <!-- user-menu -->
+                <!-- user-menu-container -->
+            </div>
+            <!-- private-office -->
+        </div>
+        <!-- private-office-inner -->
+    </div>
+    <!-- private-office-container -->
+    <div class="vk-group-container">
+        <!-- VK Widget -->
+        <div id="vk_groups"></div>
+        <!--<script>VK.Widgets.Group("vk_groups", {mode:0, width:"210", height:"252", color1:'FFFFFF', color2:'0371ad', color3:'0371ad'}, 761123);</script>-->
+    </div>
+    <!-- vk-group-container -->
+    <div class="banner-container"><a href="#"><img src="img/banner.jpg" alt=""></a></div>
+    <!-- banner-container -->
+</div>
+
+<!-- right-sidebar -->
+
+</div>
+<!-- content-wrapper -->
+
+<!-- main-wrapper -->
+
+<div class="footer-wrap">
+    <div class="footer-centring">
+        <div class="footer-top">
+            <div class="footer-menu-container">
+                <ul class="footer-menu">
+                    <li><a href="#">Пройти тест</a></li>
+                    <li><a href="#">Новостной блок</a></li>
+                    <li><a href="#">Поиск по сайту</a></li>
+                    <li><span class="contact-information-footer">Контактная информация</span></li>
+                </ul>
+                <!-- footer-menu -->
+            </div>
+            <!-- footer-menu-container -->
+            <div class="column first">
+                <ul class="footer-column-menu">
+                    <li class="first"><a href="#">О нас</a></li>
+                    <li><a href="#">История</a></li>
+                    <li><a href="#">Команда</a></li>
+                    <li><a href="#">100-летняя программа развития</a></li>
+                    <li><a href="#">План на 2013 год.</a></li>
+                    <li><a href="#">Партнеры</a></li>
+                    <li><a href="#">Вакансии</a></li>
+                </ul>
+                <!-- footer-column-menu -->
+            </div>
+            <!-- column -->
+            <div class="column">
+                <ul class="footer-column-menu">
+                    <li class="first"><a href="#">Проекты ДИМСИ</a></li>
+                    <li class="limit-progects"><a href="#">Мативатор24. Lorem ipsum dolor sit amet</a></li>
+                    <li class="limit-progects"><a href="#">Город-Бизнес-НКО. Lorem ipsum dolor sit amet</a></li>
+                    <li class="limit-progects"><a href="#">Дизайнеры успеха. Lorem ipsum dolor sit amet</a></li>
+                    <li class="limit-progects"><a href="#">Семена времени. Lorem ipsum dolor sit amet</a></li>
+                    <li class="limit-progects"><a href="#">Молодой карьерист. Lorem ipsum dolor sit amet</a></li>
+                    <li class="limit-progects"><a href="#">Все проекты. Lorem ipsum dolor sit amet</a></li>
+                </ul>
+                <!-- footer-column-menu -->
+            </div>
+            <!-- column -->
+            <div class="column">
+                <ul class="footer-column-menu">
+                    <li class="first"><a href="#">Услуги</a></li>
+                    <li><a href="#">Свечи</a></li>
+                    <li><a href="#">Тренинг или курс</a></li>
+                    <li><a href="#">Флешки</a></li>
+                    <li><a href="#">Книги</a></li>
+                </ul>
+                <!-- footer-column-menu -->
+            </div>
+            <!-- column -->
+            <div class="column">
+                <ul class="footer-column-menu">
+                    <li class="first"><a href="#">Материалы</a></li>
+                    <li><a href="#">Ответы специалистов</a></li>
+                    <li><a href="#">Статьи</a></li>
+                    <li><a href="#">Видео</a></li>
+                    <li><a href="#">Подкасты</a></li>
+                </ul>
+                <!-- footer-column-menu -->
+            </div>
+            <!-- column -->
+            <div class="column social-container"><span class="title">ДИМСИ в соц. сетях</span>
+                <ul class="social">
+                    <li><a href="#"><span>ВКонтакте</span></a></li>
+                    <li><a href="#"><span>Фейсбук</span></a></li>
+                    <li><a href="#"><span>Твиттер</span></a></li>
+                    <li><a href="#"><span>Инстаграм</span></a></li>
+                    <li><a href="#"><span>Одноклассники</span></a></li>
+                </ul>
+                <!-- social -->
+            </div>
+            <!-- column -->
+        </div>
+        <!-- footer-top -->
+        <div class="footer-bottom"> <span class="copyright">© 2013 Детские и молодежные социальные инициативы (ДИМСИ). Все права защищены.<br>
+      Копирование материалов разрешено только с согласия администратора сайта.</span> <span class="create-site">Создание сайта — <br>
+      <a href="#" class="white"><span>дизайн-студия «Aston»</span></a></span>
+
+            <div class="clear"></div>
+            <div class="like"><span>Расскажите о нас друзьям:</span>
+
+                <div class="vk">
+                    <!--<script> VK.init({apiId:4141621, onlyWidgets:true});</script>-->
+                    <div id="vk_like"></div>
+                    <!--<script type="text/javascript">VK.Widgets.Like("vk_like", {type:"mini"}); </script>-->
+                </div>
+                <div class="facebook">
+                    <!--<iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;width&amp;layout=button_count&amp;action=like&amp;show_faces=true&amp;share=false&amp;height=21"
+                    scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:21px;"
+                    allowTransparency="true"></iframe>-->
+                </div>
+                <div class="twitter"><a href="https://twitter.com/share" class="twitter-share-button" data-lang="en">Tweet</a>
+                    <!--<script>!function (d, s, id) {
+                      var js, fjs = d.getElementsByTagName(s)[0];
+                      if (!d.getElementById(id)) {
+                          js = d.createElement(s);
+                          js.id = id;
+                          js.src = "https://platform.twitter.com/widgets.js";
+                          fjs.parentNode.insertBefore(js, fjs);
+                      }
+                  }(document, "script", "twitter-wjs");</script>-->
+                </div>
+                <div class="google">
+                    <div class="g-plusone" data-size="medium"></div>
+                    <!--<script type="text/javascript">
+                        window.___gcfg = {lang:'ru'};
+                        (function () {
+                            var po = document.createElement('script');
+                            po.type = 'text/javascript';
+                            po.async = true;
+                            po.src = 'https://apis.google.com/js/platform.js';
+                            var s = document.getElementsByTagName('script')[0];
+                            s.parentNode.insertBefore(po, s);
+                        })();
+                    </script>-->
+                </div>
+                <div class="lj"></div>
+            </div>
+            <!-- like -->
+        </div>
+        <!-- footer-bottom -->
+
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,1111 @@
+<!doctype html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <title>Главная</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- Cброс стилей -->
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/jquery-1.8.2.min.js"></script>
+    <script src="js/emerge.js"></script>
+    <script src="js/prefixfree.min.js"></script>
+    <!-- автоперфиксы "-moz-", "-webkit-" и др. -->
+    <script src="js/jquery.bxslider.min.js"></script>
+    <!-- плагин для слайдеров -->
+    <script src="js/jquery.mousewheel.js"></script>
+    <!-- Скролл мышью -->
+    <script src="js/jquery.jscrollpane.min.js"></script>
+    <!-- Скролл -->
+    <script src="js/masonry.pkgd.min.js"></script>
+    <!-- Размешение блоков как pinterest -->
+    <script src="js/effects.js"></script>
+    <!--<script src="js/jquery.arcticmodal-0.3.min.js"></script>-->
+    <!-- Файл со всеми эффектами js -->
+    <script src="js/placeholders.js"></script>
+    <script src="//vk.com/js/api/openapi.js?105"></script>
+    <script type="text/javascript" src="js/jquery.liTextLength.js"></script>
+    <script src="js/jquery.ezmark.min.js"></script>
+    <!-- arcticModal -->
+    <script src="js/jquery.arcticmodal.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.limit-progects-slide').liTextLength({
+                length:300, //Видимое кол-во символов
+                afterLength:'...', //Текст после видимого содержания
+                fullText:false //Добавить ссылку для отображения скрытого текста
+            });
+            $('.limit-latest-news').liTextLength({
+                length:50, //Видимое кол-во символов
+                afterLength:'...', //Текст после видимого содержания
+                fullText:false //Добавить ссылку для отображения скрытого текста
+            });
+            $('.tests-resume').liTextLength({
+                length:100, //Видимое кол-во символов
+                afterLength:'...', //Текст после видимого содержания
+                fullText:false //Добавить ссылку для отображения скрытого текста
+            });
+        })
+    </script>
+    <script type="text/javascript" language="javascript" src="js/jquery.dotdotdot.min.js"></script>
+    <script type="text/javascript" language="javascript">
+        $(function () {
+            $('.limit-test').dotdotdot();
+            $('.limit-progects').dotdotdot();
+        });
+
+    </script>
+    <script type="text/javascript">
+        $(function () {
+            $('.input-set input').ezMark();
+        });
+    </script>
+    <script>
+        var readMore = function () {
+            var $read = $('.read-more');
+            $read.click(function (event) {
+                event.preventDefault();
+                if ($(this).prev('.hidden-text').is(':hidden')) $(this).children('span').text('Свернуть');
+                else $(this).children('span').text('Читать еще');
+                $(this).toggleClass('active');
+                $(this).prev('.hidden-text').stop(true, true).slideToggle(500);
+            });
+        }
+
+        $(function () {
+            $('.projects-pager').jScrollPane();
+        });
+    </script>
+    
+<link rel="stylesheet" href="css/dropkick.css" type="text/css">
+    <script src="js/jquery.dropkick-min.js"></script>
+    <script type="text/javascript" charset="utf-8">
+        $(function () {
+            $('.default').dropkick();
+
+           $('.change').dropkick({
+                change:function (value, label) {
+                    alert('You picked: ' + label + ':' + value);
+                }
+            });
+
+            $('.existing_event').dropkick(/*{
+             change: function () {
+             $(this).change(); // This is just duplicating the event, let's remove
+             }
+             }*/);
+
+            $('.custom_theme').dropkick({
+                theme:'black',
+                change:function (value, label) {
+                    $(this).dropkick('theme', value);
+                }
+            });
+
+            $('.dk_container').first().focus();
+        });
+    </script>
+    
+    <script>
+        $(document).ready(function () {
+            $(".spoiler-text .block").show();
+            $(".close .block").hide();
+            $(".box").click(function () {
+                $(this).toggleClass("bgcolor").next().slideToggle("slow");
+			
+	        		});
+        });
+    </script>
+
+    </head>
+    <body>
+
+<div class="emerge" data-effect="slide" id="header-wrapper">
+<div class="header-wrap">
+      <div class="header"><span class="logo"></span><!-- logo -->
+    <div class="menu-container">
+          <ul class="menu">
+        <li><a href="#">О нас</a></li>
+        <li><a href="#">Проекты</a></li>
+        <li><a href="#">Услуги</a></li>
+        <li><a href="#">Пройти тест</a></li>
+        <li><a href="#">Материалы</a></li>
+        <li><a href="#">Новостной блог</a></li>
+      </ul>
+        </div>
+    <div class="contacts"><span class="phone">+7 (916) 554-12-33</span> <a href="#"
+                                                                       class="contact-information blue-button"
+                                                                       id="#modal-pic"
+                                                                       onclick="$('#modal-1').arcticmodal()"> <span
+        class="img"></span> <span>Контактная информация</span> </a>
+          <div class="g-hidden">
+        <div class="box-modal" id="modal-1">
+              <div class="box-modal_close arcticmodal-close"></div>
+              <div class="map-title"><span>Заголовок фото</span></div>
+              <div class="modal-content">
+            <div class="map-content">
+                  <div class="map-content-title"><span>Московское отделение ДИМСИ</span></div>
+                  <div class="map-contacts-container">
+                <div class="map-contacts">
+                      <ul>
+                    <li><span class="title">Телефон:</span><span class="text">+7 (916) 554-12-33</span></li>
+                    <li><span class="title">E-Mail:</span><a href="#" class="blue"><span>info.dimsi@gmail.com</span></a> </li>
+                    <li><span class="title">Адрес:</span><span class="text">198778, г. Москва, Комсомольская ул., дом 12, офис 321, 5 звонков</span> </li>
+                  </ul>
+                    </div>
+                <!-- map-contacts -->
+                <div class="map-contacts-person">
+                      <div class="img"><img src="img/person.jpg" alt=""></div>
+                      <span class="title">Контактное лицо:</span> <span class="name">Морозов Роман Андреевич</span> <span
+                class="phone-person">+7 921 987-98-87</span> <a href="#" class="mail-person blue"><span>rim.morozov@gmail.com</span></a> </div>
+                <!-- map-contacts-person --> 
+              </div>
+                  
+                  <!-- map-contacts-container -->
+                  <div class="map-form-container"><span class="title">Свяжитесь с нами</span>
+                <form action="#">
+                      <div class="map-form-left">
+                    <input type="text" class="your-name input-t alert-input" placeholder="Ваше ФИО" tabindex="1">
+                    <input type="text" class="your-mail input-t" placeholder="Ваш телефон или e-mail" tabindex="2">
+                  </div>
+                      <!-- map-form-left -->
+                      <div class="map-form-right">
+                    <textarea name="" class="input-text-area your-mess" placeholder="Ваше сообщение" tabindex="3"></textarea>
+                  </div>
+                      <!-- map-form-right -->
+                      <div class="map-form-bottom">
+                    <input type="submit" value="Отправить" class="blue-button map-submit">
+                    <div class="call-container">
+                          <div class="remem-container">
+                        <div class="input-set">
+                              <label class="label-remem" for="order-call">
+                            <input type="checkbox" id="order-call">
+                            Заказать обратный звонок</label>
+                            </div>
+                      </div>
+                        </div>
+                    <!-- call-container -->
+                    <div class="error-container" style="display:block"><span>Заполните:</span> <span
+                        class="error-name">ФИО</span> <span class="error-phone">e-mail</span> <span class="error-mess">Cообщение</span> </div>
+                    <!-- error-container --> 
+                  </div>
+                      <!-- map-form-bottom -->
+                    </form>
+              </div>
+                  <!-- map-form-container --> 
+                </div>
+            <div class="map-wrap-modal clearfix">
+                  <div class="spoiler-map">
+                <div class="spoiler close">
+                      <div class="box">
+                    <div class="map-spoiler-row">
+                          <div class="map-spoiler-item">Отделения ДИМСИ</div>
+                          <div class="show"><span>на карте</span></div>
+                        </div>
+                    <div class="hide"><span>на карте</span></div>
+                  </div>
+                      <div class="block" style="padding-top:15px;">
+                    <div class="filter-panel clearfix">
+                          <div class="filter-panel-item-select clearfix">
+                        <select name="region" class="default" tabindex="1" style="width:240px;">
+                              <option value="0" selected>Выберите регион</option>
+                              <option value="1">Республика Адыгея</option>
+                              <option value="2">Республика Башкортостан</option>
+                              <option value="3">Республика Бурятия</option>
+                              <option value="4">Республика Алтай</option>
+                              <option value="5">Республика Дагестан</option>
+                              <option value="6">Республика Ингушетия</option>
+                              <option value="7">Кабардино-Балкарская Республика</option>
+                              <option value="8">Республика Калмыкия</option>
+                              <option value="9">Республика Карачаево-Черкесия</option>
+                              <option value="10">Республика Карелия</option>
+                              <option value="11">Республика Коми</option>
+                              <option value="12">Республика Марий Эл</option>
+                              <option value="13">Республика Мордовия</option>
+                              <option value="14">Республика Саха (Якутия)</option>
+                              <option value="15">Республика Северная Осетия-Алания</option>
+                            </select>
+                      </div>
+                          <div class="filter-panel-item-select clearfix">
+                        <select name="city" class="default" tabindex="2" style="width:170px;">
+                              <option value="" selected>Выберите город</option>
+                              <option value="101">Майкоп
+                          <option value="101">Уфа</option>
+                              <option value="102">Улан-Удэ</option>
+                              <option value="103">Горно-Алтайск</option>
+                              <option value="104">Махачкала</option>
+                              <option value="105">Магас</option>
+                              <option value="106">Нальчик</option>
+                              <option value="107">Элиста</option>
+                              <option value="108">Черкесск</option>
+                              <option value="109">Петрозаводск</option>
+                              <option value="110">Сыктывкар</option>
+                              <option value="111">Йошкар-Ола</option>
+                              <option value="112">Саранск</option>
+                              <option value="113">Якутск</option>
+                              <option value="114">Владикавказ</option>
+                              <option value="115">Казань</option>
+                            </select>
+                      </div>
+                        </div>
+                    <div class="map-wrap-modal">
+                          <div class="map-index clearfix"><img src="img/map-cap.png" width="810" height="300"></div>
+                          <table class="directions-list">
+                        <tbody>
+                              <tr class="table-heading-default">
+                            <th width="275">Представитель в городе</th>
+                            <th width="133">Телефон</th>
+                            <th width="152">Электронная почта</th>
+                          </tr>
+                            </tbody>
+                      </table>
+                          <div class="directions-index">
+                        <table class="directions-list">
+                              <tbody>
+                            <tr class="table-heading-default">
+                                  <td width="399"><div class="representative-pic"><img src="img/user-photo.png"></div>
+                                <a href="#" class="city-name">Москва</a>
+                                <div class="representative-name">Морозов Роман Андреевич</div></td>
+                                  <td width="194"><span>(812) 702-56-20 </span> <span>(812) 702-56-20 </span></td>
+                                  <td width="201"><span><a href="#">lorem@ipsum.ru</a></span> <span><a href="#">info@it-hive.ru</a></span></td>
+                                </tr>
+                            <tr>
+                                  <td><div class="representative-pic"><img src="img/user-photo-2.png"></div>
+                                <a href="#" class="city-name">Петропавловск-Камчатский</a>
+                                <div class="representative-name">Морозов Роман Андреевич</div></td>
+                                  <td><span>(812) 702-56-20 </span> <span>(812) 702-56-20 </span></td>
+                                  <td><span><a href="#">lorem@ipsum.ru</a></span> <span><a href="#">info@it-hive.ru</a></span></td>
+                                </tr>
+                            <tr>
+                                  <td><div class="representative-pic"><img src="img/user-photo-3.png"></div>
+                                <a href="#" class="city-name">Комсмомольск на Амуре</a>
+                                <div class="representative-name">Морозов Роман Андреевич</div></td>
+                                  <td><span>(812) 702-56-20 </span> <span>(812) 702-56-20 </span></td>
+                                  <td><span><a href="#">lorem@ipsum.ru</a></span> <span><a href="#">info@it-hive.ru</a></span></td>
+                                </tr>
+                            <tr>
+                                  <td><div class="representative-pic"><img src="img/user-photo-4.png"></div>
+                                <a href="#" class="city-name">Санкт-Петербург</a>
+                                <div class="representative-name">Морозов Роман Андреевич</div></td>
+                                  <td><span>(812) 702-56-20 </span> <span>(812) 702-56-20 </span></td>
+                                  <td><span><a href="#">lorem@ipsum.ru</a></span> <span><a href="#">info@it-hive.ru</a></span></td>
+                                </tr>
+                            <tr>
+                                  <td><div class="representative-pic"><img src="img/user-photo.png"></div>
+                                <a href="#" class="city-name">Екатеринбург</a>
+                                <div class="representative-name">Морозов Роман Андреевич</div></td>
+                                  <td><span>(812) 702-56-20 </span> <span>(812) 702-56-20 </span></td>
+                                  <td><span><a href="#">lorem@ipsum.ru</a></span> <span><a href="#">info@it-hive.ru</a></span></td>
+                                </tr>
+                            <tr>
+                                  <td><div class="representative-pic"><img src="img/user-photo.png"></div>
+                                <a href="#" class="city-name">Волгоград</a>
+                                <div class="representative-name">Морозов Роман Андреевич</div></td>
+                                  <td><span>(812) 702-56-20 </span> <span>(812) 702-56-20 </span></td>
+                                  <td><span><a href="#">lorem@ipsum.ru</a></span> <span><a href="#">info@it-hive.ru</a></span></td>
+                                </tr>
+                            <tr>
+                                  <td><div class="representative-pic"><img src="img/user-photo-2.png"></div>
+                                <a href="#" class="city-name">Калининград</a>
+                                <div class="representative-name">Морозов Роман Андреевич</div></td>
+                                  <td><span>(812) 702-56-20 </span> <span>(812) 702-56-20 </span></td>
+                                  <td><span><a href="#">lorem@ipsum.ru</a></span> <span><a href="#">info@it-hive.ru</a></span></td>
+                                </tr>
+                            <tr>
+                                  <td><div class="representative-pic"><img src="img/user-photo-3.png"></div>
+                                <a href="#" class="city-name">Сочи</a>
+                                <div class="representative-name">Морозов Роман Андреевич</div></td>
+                                  <td><span>(812) 702-56-20 </span> <span>(812) 702-56-20 </span></td>
+                                  <td><span><a href="#">lorem@ipsum.ru</a></span> <span><a href="#">info@it-hive.ru</a></span></td>
+                                </tr>
+                          </tbody>
+                            </table>
+                      </div>
+                        </div>
+                  </div>
+                    </div>
+              </div>
+                </div>
+          </div>
+            </div>
+      </div>
+          
+          <!--<img src="img/gallery/1-small.jpg" width="96" height="73" id="#modal-pic"
+                 onclick="$('#modal-1').arcticmodal()">
+--> 
+          
+          <!-- contact-information --> 
+        </div>
+    <!-- contacts --> 
+  </div>
+      <!-- header --> 
+      
+    </div>
+<div class="latest-news-panel"> <span class="latest-news-title">Свежие новости:</span>
+      <div class="latest-news-container">
+    <ul class="latest-news">
+          <li><a href="#"> <span class="title limit-latest-news">Далеко-далеко за словесными горами. Далеко-далеко за словесными горами.</span> <span class="date">17.10.2013</span> </a></li>
+          <li><a href="#"> <span class="title limit-latest-news">17 сентября ДИМСИ исполнилось 18 лет! Далеко-далеко за словесными горами.</span> <span class="date">17.10.2013</span> </a></li>
+          <li><a href="#"> <span class="title limit-latest-news">Заголовок третьей новости. Далеко-далеко за словесными горами.</span> <span class="date">17.10.2013</span> </a></li>
+        </ul>
+    <!-- latest-news --> 
+  </div>
+      <!-- latest-news-container -->
+      <div class="search-container">
+    <div class="search">
+          <form action="#">
+        <input type="text" class="search-text" placeholder="Поиск по сайту">
+        <input type="submit" value="" class="search-submit">
+      </form>
+        </div>
+    <!-- search --> 
+  </div>
+      <!-- search-container --> 
+    </div>
+<!-- latest-news-panel -->
+</div>
+
+
+<div class="content-wrap clearfix">
+      <div class="content">
+    <div class="projects-container emerge" data-effect="slide" id="projects-container" data-await="header-wrapper">
+          <div class="projects-slider-container">
+        <ul class="projects-slider">
+              <li><img src="img/projects-img.jpg" alt="">
+            <div class="project-description">
+                  <div class="project-logo"><a href="#"><img src="img/projects-logo_1.png" alt=""></a></div>
+                  <!-- project-logo -->
+                  
+                  <div class="project-text"><a href="#" class="project-title blue"><span>Новый проект ДИМСИ «Город-Бизнес-НКО». Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты.</span></a><!-- project-title -->
+                <p class="limit-progects-slide">Проект посвящен совершенствованию моделей и практик гражданского
+                      и корпоративного участия в управлении местными сообществами. Мы объединяем эти три слоя в
+                      один!<br>
+                      Корпоративного участия в управлении местными сообществами. Мы объединяем эти три слоя в
+                      один! Проект посвящен совершенствованию моделей и практик гражданского и корпоративного
+                      участия в управлении местными сообществами. Мы объединяем эти три слоя в один!</p>
+                <a href="#" class="maintain grey-button">Поддержать проект</a></div>
+                  <!-- project-text --> 
+                </div>
+            <!-- projects-description --> 
+          </li>
+              <li><img src="img/projects-img.jpg" alt="">
+            <div class="project-description">
+                  <div class="project-logo"><a href="#"><img src="img/projects-logo_1.png" alt=""></a></div>
+                  <!-- project-logo -->
+                  <div class="project-text"><a href="#" class="project-title blue"><span class="limit-title-news">Совместный проект с Лукойл начинает свое шевствие по планете! Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. </span></a><!-- project-title -->
+                <p class="limit-progects-slide">Проект посвящен совершенствованию моделей и практик гражданского
+                      и корпоративного участия в управлении местными сообществами. Мы объединяем эти три слоя в
+                      один!<br>
+                      Корпоративного участия в управлении местными сообществами. Мы объединяем эти три слоя в
+                      один! Проект посвящен совершенствованию моделей и практик гражданского и корпоративного
+                      участия в управлении местными сообществами. Мы объединяем эти три слоя в один!<br>
+                      Корпоративного участия в управлении местными сообществами. Мы объединяем эти три слоя в
+                      один!</p>
+                <a href="#" class="maintain grey-button">Поддержать проект</a></div>
+                  <!-- project-text --> 
+                </div>
+            <!-- projects-description --> 
+          </li>
+              <li><img src="img/projects-img_2.jpg" alt="">
+            <div class="project-description">
+                  <div class="project-logo"><a href="#"><img src="img/projects-logo_2.png" alt=""></a></div>
+                  <!-- project-logo -->
+                  <div class="project-text"><a href="#" class="project-title blue"> <span class="limit-title-news">Совместный проект с Лукойл начинает свое шевствие по планете!</span> </a><!-- project-title -->
+                <p class="limit-progects-slide">Проект посвящен совершенствованию моделей и практик гражданского
+                      и корпоративного. Проект посвящен совершенствованию моделей и практик гражданского и
+                      корпоративного. Проект посвящен совершенствованию моделей и практик гражданского и
+                      корпоративного. Проект посвящен совершенствованию моделей и практик гражданского и
+                      корпоративного. Проект посвящен совершенствованию моделей и практик гражданского и
+                      корпоративного.</p>
+                <a href="#" class="maintain grey-button">Поддержать проект</a></div>
+                  <!-- project-text --> 
+                </div>
+            <!-- projects-description --> 
+          </li>
+              <li><img src="img/projects-img.jpg" alt="">
+            <div class="project-description">
+                  <div class="project-logo"><a href="#"><img src="img/projects-logo_1.png" alt=""></a></div>
+                  <!-- project-logo -->
+                  <div class="project-text"><a href="#" class="project-title blue"> <span class="limit-title-news">Новый проект ДИМСИ «Город-Бизнес-НКО. »</span> </a><!-- project-title -->
+                <p class="limit-progects-slide">Проект посвящен совершенствованию моделей и практик гражданского
+                      и корпоративного участия в управлении местными сообществами. Мы объединяем эти три слоя в
+                      один!<br>
+                      Корпоративного участия в управлении местными сообществами. Мы объединяем эти три слоя в
+                      один!</p>
+                <a href="#" class="maintain grey-button">Поддержать проект</a></div>
+                  <!-- project-text --> 
+                </div>
+            <!-- projects-description --> 
+          </li>
+              <li><img src="img/projects-img.jpg" alt="">
+            <div class="project-description">
+                  <div class="project-logo"><a href="#"><img src="img/projects-logo_1.png" alt=""></a></div>
+                  <!-- project-logo -->
+                  <div class="project-text"><a href="#" class="project-title blue"> <span class="limit-title-news">Новый проект ДИМСИ «Город-Бизнес-НКО»</span> </a><!-- project-title -->
+                <p class="limit-progects-slide">Проект посвящен совершенствованию моделей и практик гражданского
+                      и корпоративного участия в управлении местными сообществами. Мы объединяем эти три слоя в
+                      один!<br>
+                      Корпоративного участия в управлении местными сообществами. Мы объединяем эти три слоя в
+                      один!</p>
+                <a href="#" class="maintain grey-button">Поддержать проект</a></div>
+                  <!-- project-text --> 
+                </div>
+            <!-- projects-description --> 
+          </li>
+              <li><img src="img/projects-img_2.jpg" alt="">
+            <div class="project-description">
+                  <div class="project-logo"><a href="#"><img src="img/projects-logo_2.png" alt=""></a></div>
+                  <!-- project-logo -->
+                  <div class="project-text"><a href="#" class="project-title blue"> <span class="limit-title-news">Совместный проект с Лукойл начинает свое шевствие по планете!</span> </a><!-- project-title -->
+                <p class="limit-progects-slide">Проект посвящен совершенствованию моделей и практик гражданского
+                      и корпоративного.</p>
+                <a href="#" class="maintain grey-button">Поддержать проект</a></div>
+                  <!-- project-text --> 
+                </div>
+            <!-- projects-description -->
+        </ul>
+        <!-- projects-slider --> 
+      </div>
+          <!-- projects-slider-container -->
+          <div class="projects-pager-container">
+        <div class="projects-pager-title"><a href="#">Проекты ДИМСИ</a></div>
+        <div class="projects-pager"><a href="" class="tab" data-slide-index="0"> <span class="tab-inner"> <span
+                class="tab-title ">Проект «Мотиватор24». Проект «Мотиватор24». Проект «Мотиватор24».</span>
+          <p>Основная цель проекта — разнообразить сексуальную жизнь граждан РФ</p>
+          </span><!-- tab-inner --> 
+          </a><!-- tab --> 
+              <a href="" class="tab" data-slide-index="1"> <span class="tab-inner"> <span class="tab-title">Город-Бизнес-НКО</span>
+              <p>Совершенствование моделей и практик гражданского и корпоративного участия в управлении местными
+                сообществами</p>
+              </span><!-- tab-inner --> 
+          </a><!-- tab --> 
+              <a href="" class="tab" data-slide-index="2"> <span class="tab-inner"> <span class="tab-title">Город-Бизнес-НКО. Основная цель проекта — разнообразить сексуальную жизнь граждан РФ</span>
+              <p>Совершенствование моделей и практик гражданского и корпоративного участия в управлении местными
+                сообществами</p>
+              </span><!-- tab-inner --> 
+          </a><!-- tab --> 
+              <a href="" class="tab" data-slide-index="3"> <span class="tab-inner"> <span class="tab-title">Проект «Мотиватор24». Основная цель проекта — разнообразить сексуальную жизнь граждан РФ</span>
+              <p>Основная цель проекта — разнообразить сексуальную жизнь граждан РФ</p>
+              </span><!-- tab-inner --> 
+          </a><!-- tab --> 
+              <a href="" class="tab" data-slide-index="4"> <span class="tab-inner"> <span class="tab-title">Город-Бизнес-НКО. Основная цель проекта — разнообразить сексуальную жизнь граждан РФ</span>
+              <p>Совершенствование моделей и практик гражданского и корпоративного участия в управлении местными
+                сообществами</p>
+              </span><!-- tab-inner --> 
+          </a><!-- tab --> 
+            </div>
+        <!-- projects-pager --> 
+      </div>
+          <!-- projects-pager-container --> 
+        </div>
+    <!-- projects-container -->
+    <div class="main-content-container emerge"  data-effect="slide" id="main-content-container" data-await="right-sidebar">
+          <div class="main-content">
+        <h1>ДИМСИ — это Детские И Молодёжные Социальные Инициативы — Заголовок</h1>
+        <!-- main-content-title -->
+        <div><img src="img/miniature.png" alt="" class="align-left">Этот текст обтекает картинку справа, но сама
+              картинка встает сюда совершенно безболезненно. Никакие стили у нее не прописаны, только те, которые
+              относятся к контенту. Стили верстки абсолютно не влияют на эту картинку. </div>
+        <div><em>Курсивный текст . Организация, проверенная временем (День Рождения 17 сентября 1995 г.),
+          востребованный способ семейного сопровождения человека в его успешной социализации.
+          Курсивный текст . Организация, проверенная временем (День Рождения 17 сентября 1995 г.),
+          востребованный способ семейного сопровождения человека в его успешной социализации. </em></div>
+        <hr>
+        <h2>Интересная информация</h2>
+        <div>Курсивный текст . Организация, проверенная временем (День Рождения 17 сентября 1995 г.),
+              востребованный способ семейного сопровождения человека в его успешной социализации. </div>
+        <div> <span class="quote"> <span class="border"> <span class="top"></span>
+          <div class="bottom"></div>
+          </span> 
+          <!-- полоска в цитаце -->
+          <p>Цитата. Цель ДИМСИ — выявление и поддержка инициатив детей и молодёжи, направленных на
+            позитивную
+            социализацию и повышение.</p>
+          <span class="source">Источник: <a href="#"
+                                                  class="blue"><span>www.wikipedia.org</span></a> </span><!-- source --> 
+          </span> 
+              <!-- quote --> 
+            </div>
+        <h3>Заголовок H3</h3>
+        <div><strong>Список — &lt;strong&gt;</strong></div>
+        <div>
+              <ul class="default-list">
+            <li>Пункт списка 1 — lineheight больше чем обычно</li>
+            <li>Пункт списка 2</li>
+            <li>Общероссийская общественная организация «Детские и молодёжные социальные инициативы» (ДИМСИ) —
+                  добровольное, некоммерческое. </li>
+            <li>Пункт списка 4</li>
+          </ul>
+            </div>
+        <div><a href="#" class="join blue-button"> <span class="img"></span> <span>Вступить в ДИМСИ</span> </a><!-- join --> 
+            </div>
+      </div>
+          <div class="content-menu-container">
+        <div class="content-menu-title"><span>Еще по теме</span></div>
+        <ul class="content-menu">
+              <li><a href="#">
+                <div><span>История ДИМСИ. </span></div>
+                </a></li>
+              <li><a href="#">
+                <div><span>Команда. </span></div>
+                </a></li>
+              <li><a href="#">
+                <div><span>100-летняя программа развития. </span></div>
+                </a></li>
+              <li class="active"><a href="#">
+                <div><span>Очень длинный активный пункт меню. Очень длинный активный пункт меню. </span></div>
+                </a></li>
+            </ul>
+        <!-- content-menu --> 
+      </div>
+          <!-- content-menu-container--> 
+        </div>
+    <!-- main-content-container -->
+    <div class="our-tests-container emerge" data-effect="slide" id="our-tests-container" data-await="main-content-container">
+          <div class="our-tests-top">
+          <a href="#" class="our-tests-title black"><span>Пройдите наши тесты </span></a> 
+          <span class="best-tests">-<span>самые лучшие тесты в мире!</span></span> <a href="#" class="all-tests blue"><span>Смотреть все тесты</span> »</a></div>
+          <!-- our-tests-top -->
+          <div class="our-tests">
+        <ul class="our-tests-caruosel">
+              <li class="limit-test"><a href="#" class="title blue"><span
+                    class="limit-tests-title">Качели Времени. </span></a>
+            <p>Этот тест поможет вам сформулировать и определить место для самого себя в современном государствое.
+                  Этот тест поможет вам сформулировать и определить место для самого себя в современном государствое.
+                  Этот тест поможет вам сформулировать и определить место для самого себя в современном государствое.
+                  Этот тест поможет вам сформулировать и определить место для самого себя в современном
+                  государствое.</p>
+          </li>
+              <li class="limit-test"><a href="#" class="title blue"><span class="limit-tests-title">Качели Времени. Качели Времени карьериста.</span></a>
+            <p>Этот тест поможет вам сформулировать и определить место для самого себя в современном государствое.
+                  Этот тест поможет вам сформулировать и определить место для самого себя в современном государствое.
+                  Этот тест поможет вам сформулировать и определить место для самого себя в современном государствое.
+                  Этот тест поможет вам сформулировать и определить место для самого себя в современном
+                  государствое.</p>
+          </li>
+              <li class="limit-test"><a href="#" class="title blue"><span class="limit-tests-title">Качели Времени реализованой идеи. Качели Времени реализованой идеи.</span></a>
+            <p>Этот тест поможет вам сформулировать и определить место для самого себя в современном государствое.
+                  Этот тест поможет вам сформулировать и определить место для самого себя в современном государствое.
+                  Этот тест поможет вам сформулировать и определить место для самого себя в современном государствое.
+                  Этот тест поможет вам сформулировать и определить место для самого себя в современном
+                  государствое.</p>
+          </li>
+              <li class="limit-test"><a href="#" class="title blue"><span
+                    class="limit-tests-title">Качели Времени. </span></a>
+            <p>Этот тест поможет вам сформулировать и определить место для самого себя в современном государствое.
+                  Этот тест поможет вам сформулировать и определить место для самого себя в современном государствое.
+                  Этот тест поможет вам сформулировать и определить место для самого себя в современном государствое.
+                  Этот тест поможет вам сформулировать и определить место для самого себя в современном
+                  государствое.</p>
+          </li>
+              <li class="limit-test"><a href="#" class="title blue"><span class="limit-tests-title">Качели Времени. Качели Времени карьериста.</span></a>
+            <p>Этот тест поможет вам сформулировать и определить место для самого себя в современном государствое.
+                  Этот тест поможет вам сформулировать и определить место для самого себя в современном государствое.
+                  Этот тест поможет вам сформулировать и определить место для самого себя в современном государствое.
+                  Этот тест поможет вам сформулировать и определить место для самого себя в современном
+                  государствое.</p>
+          </li>
+              <li class="limit-test"><a href="#" class="title blue"><span class="limit-tests-title">Качели Времени реализованой идеи. Качели Времени реализованой идеи.</span></a>
+            <p>Этот тест поможет вам сформулировать и определить место для самого себя в современном государствое.
+                  Этот тест поможет вам сформулировать и определить место для самого себя в современном государствое.
+                  Этот тест поможет вам сформулировать и определить место для самого себя в современном государствое.
+                  Этот тест поможет вам сформулировать и определить место для самого себя в современном
+                  государствое.</p>
+          </li>
+              <li class="limit-test"><a href="#" class="title blue"><span
+                    class="limit-tests-title">Качели Времени. </span></a>
+            <p>Этот тест поможет вам сформулировать и определить место для самого себя в современном государствое.
+                  Этот тест поможет вам сформулировать и определить место для самого себя в современном государствое.
+                  Этот тест поможет вам сформулировать и определить место для самого себя в современном государствое.
+                  Этот тест поможет вам сформулировать и определить место для самого себя в современном
+                  государствое.</p>
+          </li>
+              <li class="limit-test"><a href="#" class="title blue"><span class="limit-tests-title">Качели Времени. Качели Времени карьериста.</span></a>
+            <p>Этот тест поможет вам сформулировать и определить место для самого себя в современном государствое.
+                  Этот тест поможет вам сформулировать и определить место для самого себя в современном государствое.
+                  Этот тест поможет вам сформулировать и определить место для самого себя в современном государствое.
+                  Этот тест поможет вам сформулировать и определить место для самого себя в современном
+                  государствое.</p>
+          </li>
+              <li class="limit-test"><a href="#" class="title blue"><span class="limit-tests-title">Качели Времени реализованой идеи. Качели Времени реализованой идеи.</span></a>
+            <p>Этот тест поможет вам сформулировать и определить место для самого себя в современном государствое.
+                  Этот тест поможет вам сформулировать и определить место для самого себя в современном государствое.
+                  Этот тест поможет вам сформулировать и определить место для самого себя в современном государствое.
+                  Этот тест поможет вам сформулировать и определить место для самого себя в современном
+                  государствое.</p>
+          </li>
+            </ul>
+        <!-- our-tests-caruosel --> 
+      </div>
+          <!-- our-tests --> 
+        </div>
+    <!-- our-tests-container -->
+    <div class="news-main-container emerge" data-effect="slide" id="news-main-container" data-await="our-tests-container">
+          <div class="news-top"><a href="#" class="news-top-title black"><span>Новости и события</span></a>
+        <div class="news-pager"><a href="" class="dotted page_1"><span>Текущие события</span></a> <a href=""
+                                                                                                 class="dotted page_2"><span>Прошедшие</span></a> <a href="" class="dotted page_3"><span>Предстоящие</span></a></div>
+        <!-- news-pager --> 
+      </div>
+          <!-- news-top -->
+          <div class="news-container">
+        <ul class="news-slider">
+              <li class="current-events"><a href="#" class="news-block">
+                <div class="title blue"><span>Общероссийская общественная организация «Детские</span></div>
+                <div class="img"><img src="img/news-img_1.jpg" height="129" width="194" alt=""></div>
+                <div class="text">
+                <p>Добровольное, некоммерческое, неполитическое, нерелигиозное объединение детей, молодёжи и взрослых.</p>
+              </div>
+                <!-- text -->
+                <div class="date">16 декабря 2013 г.</div>
+                </a><!-- news --> 
+            <a href="#" class="news-block">
+                <div class="title blue"><span>ДИМСИ дорожит каждым и нацелена только на долгосрочные отношения</span></div>
+                <div class="text">
+              <p>Цель ДИМСИ – выявление и поддержка инициатив детей и молодёжи, направленных на позитивную социализацию и
+                    повышение социально-культурной и экономической привлекательности территории.</p>
+            </div>
+                <!-- text -->
+                <div class="date">16 декабря 2013 г.</div>
+                </a><!-- news --> 
+            <a href="#" class="news-block">
+                <div class="title blue"><span>Общероссийская общественная организация «Детские</span></div>
+                <div class="img"><img src="img/news-img_2.jpg" height="129" width="194" alt=""></div>
+                <div class="text">
+              <p>Добровольное, некоммерческое, неполитическое, нерелигиозное объединение детей, молодёжи и взрослых.</p>
+            </div>
+                <!-- text -->
+                <div class="date">16 декабря 2013 г.</div>
+                </a><!-- news --> 
+            <a href="#" class="news-block">
+                <div class="title blue"><span>Каждым и нацелена только на долгосрочные отношения</span></div>
+                <div class="img"><img src="img/news-img_3.jpg" height="129" width="194" alt=""></div>
+                <div class="text">
+              <p>Молодёжи, направленных на позитивную социализацию и повышение социально-культурной и экономической
+                    привлекательности территории.</p>
+            </div>
+                <!-- text -->
+                <div class="date">16 декабря 2013 г.</div>
+                </a><!-- news --> 
+            <a href="#" class="news-block">
+                <div class="title blue"><span>Общероссийская общественная организация «Детские</span></div>
+                <div class="img"><img src="img/news-img_1.jpg" height="129" width="194" alt=""></div>
+                <div class="text">
+              <p>Добровольное, некоммерческое, неполитическое, нерелигиозное объединение детей, молодёжи и взрослых.</p>
+            </div>
+                <!-- text -->
+                <div class="date">16 декабря 2013 г.</div>
+                </a><!-- news --> 
+            <a href="#" class="news-block">
+                <div class="title blue"><span>ДИМСИ дорожит каждым и нацелена только на долгосрочные отношения</span></div>
+                <div class="text">
+              <p>Цель ДИМСИ – выявление и поддержка инициатив детей и молодёжи, направленных на позитивную социализацию и
+                    повышение социально-культурной и экономической привлекательности территории.</p>
+            </div>
+                <!-- text -->
+                <div class="date">16 декабря 2013 г.</div>
+                </a><!-- news --> 
+            <a href="#" class="news-block">
+                <div class="title blue"><span>Общероссийская общественная организация «Детские</span></div>
+                <div class="img"><img src="img/news-img_2.jpg" height="129" width="194" alt=""></div>
+                <div class="text">
+              <p>Добровольное, некоммерческое, неполитическое, нерелигиозное объединение детей, молодёжи и взрослых.</p>
+            </div>
+                <!-- text -->
+                <div class="date">16 декабря 2013 г.</div>
+                </a><!-- news --> 
+            <a href="#" class="news-block">
+                <div class="title blue"><span>Каждым и нацелена только на долгосрочные отношения</span></div>
+                <div class="img"><img src="img/news-img_3.jpg" height="129" width="194" alt=""></div>
+                <div class="text">
+              <p>Молодёжи, направленных на позитивную социализацию и повышение социально-культурной и экономической
+                    привлекательности территории.</p>
+            </div>
+                <!-- text -->
+                <div class="date">16 декабря 2013 г.</div>
+                </a><!-- news --> 
+          </li>
+              <li class="last-events"><a href="#" class="news-block">
+                <div class="title blue"><span>Общероссийская общественная организация «Детские</span></div>
+                <div class="img"><img src="img/news-img_2.jpg" height="129" width="194" alt=""></div>
+                <div class="text">
+                <p>Добровольное, некоммерческое, неполитическое, нерелигиозное объединение детей, молодёжи и взрослых.</p>
+              </div>
+                <!-- text -->
+                <div class="date">16 декабря 2013 г.</div>
+                </a><!-- news --> 
+            <a href="#" class="news-block">
+                <div class="title blue"><span>Каждым и нацелена только на долгосрочные отношения</span></div>
+                <div class="img"><img src="img/news-img_3.jpg" height="129" width="194" alt=""></div>
+                <div class="text">
+              <p>Молодёжи, направленных на позитивную социализацию и повышение социально-культурной и экономической
+                    привлекательности территории.</p>
+            </div>
+                <!-- text -->
+                <div class="date">16 декабря 2013 г.</div>
+                </a><!-- news --> 
+            <a href="#" class="news-block">
+                <div class="title blue"><span>Общероссийская общественная организация «Детские</span></div>
+                <div class="img"><img src="img/news-img_1.jpg" height="129" width="194" alt=""></div>
+                <div class="text">
+              <p>Добровольное, некоммерческое, неполитическое, нерелигиозное объединение детей, молодёжи и взрослых.</p>
+            </div>
+                <!-- text -->
+                <div class="date">16 декабря 2013 г.</div>
+                </a><!-- news --> 
+            <a href="#" class="news-block">
+                <div class="title blue"><span>ДИМСИ дорожит каждым и нацелена только на долгосрочные отношения</span></div>
+                <div class="text">
+              <p>Цель ДИМСИ – выявление и поддержка инициатив детей и молодёжи, направленных на позитивную социализацию и
+                    повышение социально-культурной и экономической привлекательности территории.</p>
+            </div>
+                <!-- text -->
+                <div class="date">16 декабря 2013 г.</div>
+                </a><!-- news --> 
+            <a href="#" class="news-block">
+                <div class="title blue"><span>Общероссийская общественная организация «Детские</span></div>
+                <div class="img"><img src="img/news-img_2.jpg" height="129" width="194" alt=""></div>
+                <div class="text">
+              <p>Добровольное, некоммерческое, неполитическое, нерелигиозное объединение детей, молодёжи и взрослых.</p>
+            </div>
+                <!-- text -->
+                <div class="date">16 декабря 2013 г.</div>
+                </a><!-- news --> 
+            <a href="#" class="news-block">
+                <div class="title blue"><span>Каждым и нацелена только на долгосрочные отношения</span></div>
+                <div class="img"><img src="img/news-img_3.jpg" height="129" width="194" alt=""></div>
+                <div class="text">
+              <p>Молодёжи, направленных на позитивную социализацию и повышение социально-культурной и экономической
+                    привлекательности территории.</p>
+            </div>
+                <!-- text -->
+                <div class="date">16 декабря 2013 г.</div>
+                </a><!-- news --> 
+            <a href="#" class="news-block">
+                <div class="title blue"><span>Общероссийская общественная организация «Детские</span></div>
+                <div class="img"><img src="img/news-img_1.jpg" height="129" width="194" alt=""></div>
+                <div class="text">
+              <p>Добровольное, некоммерческое, неполитическое, нерелигиозное объединение детей, молодёжи и взрослых.</p>
+            </div>
+                <!-- text -->
+                <div class="date">16 декабря 2013 г.</div>
+                </a><!-- news --> 
+            <a href="#" class="news-block">
+                <div class="title blue"><span>Каждым и нацелена только на долгосрочные отношения</span></div>
+                <div class="img"><img src="img/news-img_3.jpg" height="129" width="194" alt=""></div>
+                <div class="text">
+              <p>Молодёжи, направленных на позитивную социализацию и повышение социально-культурной и экономической
+                    привлекательности территории.</p>
+            </div>
+                <!-- text -->
+                <div class="date">16 декабря 2013 г.</div>
+                </a><!-- news --> 
+            <a href="#" class="news-block">
+                <div class="title blue"><span>Общероссийская общественная организация «Детские</span></div>
+                <div class="img"><img src="img/news-img_1.jpg" height="129" width="194" alt=""></div>
+                <div class="text">
+              <p>Добровольное, некоммерческое, неполитическое, нерелигиозное объединение детей, молодёжи и взрослых.</p>
+            </div>
+                <!-- text -->
+                <div class="date">16 декабря 2013 г.</div>
+                </a><!-- news --> 
+            <a href="#" class="news-block">
+                <div class="title blue"><span>ДИМСИ дорожит каждым и нацелена только на долгосрочные отношения</span></div>
+                <div class="text">
+              <p>Цель ДИМСИ – выявление и поддержка инициатив детей и молодёжи, направленных на позитивную социализацию и
+                    повышение социально-культурной и экономической привлекательности территории.</p>
+            </div>
+                <!-- text -->
+                <div class="date">16 декабря 2013 г.</div>
+                </a><!-- news --> 
+            
+          </li>
+              <li class="future-events"><a href="#" class="news-block">
+                <div class="title blue"><span>ДИМСИ дорожит каждым и нацелена только на долгосрочные отношения</span></div>
+                <div class="text">
+                <p>Цель ДИМСИ – выявление и поддержка инициатив детей и молодёжи, направленных на позитивную социализацию и
+                    повышение социально-культурной и экономической привлекательности территории.</p>
+              </div>
+                <!-- text -->
+                <div class="date">16 декабря 2013 г.</div>
+                </a><!-- news --> 
+            <a href="#" class="news-block">
+                <div class="title blue"><span>Общероссийская общественная организация «Детские</span></div>
+                <div class="img"><img src="img/news-img_1.jpg" height="129" width="194" alt=""></div>
+                <div class="text">
+              <p>Добровольное, некоммерческое, неполитическое, нерелигиозное объединение детей, молодёжи и взрослых.</p>
+            </div>
+                <!-- text -->
+                <div class="date">16 декабря 2013 г.</div>
+                </a><!-- news --> 
+            <a href="#" class="news-block">
+                <div class="title blue"><span>Общероссийская общественная организация «Детские</span></div>
+                <div class="img"><img src="img/news-img_2.jpg" height="129" width="194" alt=""></div>
+                <div class="text">
+              <p>Добровольное, некоммерческое, неполитическое, нерелигиозное объединение детей, молодёжи и взрослых.</p>
+            </div>
+                <!-- text -->
+                <div class="date">16 декабря 2013 г.</div>
+                </a><!-- news --> 
+            <a href="#" class="news-block">
+                <div class="title blue"><span>Каждым и нацелена только на долгосрочные отношения</span></div>
+                <div class="img"><img src="img/news-img_3.jpg" height="129" width="194" alt=""></div>
+                <div class="text">
+              <p>Молодёжи, направленных на позитивную социализацию и повышение социально-культурной и экономической
+                    привлекательности территории.</p>
+            </div>
+                <!-- text -->
+                <div class="date">16 декабря 2013 г.</div>
+                </a><!-- news --> 
+            <a href="#" class="news-block">
+                <div class="title blue"><span>Каждым и нацелена только на долгосрочные отношения</span></div>
+                <div class="img"><img src="img/news-img_3.jpg" height="129" width="194" alt=""></div>
+                <div class="text">
+              <p>Молодёжи, направленных на позитивную социализацию и повышение социально-культурной и экономической
+                    привлекательности территории.</p>
+            </div>
+                <!-- text -->
+                <div class="date">16 декабря 2013 г.</div>
+                </a><!-- news --> 
+            <a href="#" class="news-block">
+                <div class="title blue"><span>ДИМСИ дорожит каждым и нацелена только на долгосрочные отношения</span></div>
+                <div class="text">
+              <p>Цель ДИМСИ – выявление и поддержка инициатив детей и молодёжи, направленных на позитивную социализацию и
+                    повышение социально-культурной и экономической привлекательности территории.</p>
+            </div>
+                <!-- text -->
+                <div class="date">16 декабря 2013 г.</div>
+                </a><!-- news --> 
+            <a href="#" class="news-block">
+                <div class="title blue"><span>Общероссийская общественная организация «Детские</span></div>
+                <div class="img"><img src="img/news-img_1.jpg" height="129" width="194" alt=""></div>
+                <div class="text">
+              <p>Добровольное, некоммерческое, неполитическое, нерелигиозное объединение детей, молодёжи и взрослых.</p>
+            </div>
+                <!-- text -->
+                <div class="date">16 декабря 2013 г.</div>
+                </a><!-- news --> 
+            <a href="#" class="news-block">
+                <div class="title blue"><span>Общероссийская общественная организация «Детские</span></div>
+                <div class="img"><img src="img/news-img_2.jpg" height="129" width="194" alt=""></div>
+                <div class="text">
+              <p>Добровольное, некоммерческое, неполитическое, нерелигиозное объединение детей, молодёжи и взрослых.</p>
+            </div>
+                <!-- text -->
+                <div class="date">16 декабря 2013 г.</div>
+                </a><!-- news --> 
+          </li>
+            </ul>
+        <!-- news-slider --> 
+      </div>
+          <!-- news-container --> 
+          <span class="blog">Обо всех новостях и событиях вы можете <a href="#" class="blue"><span>почитать в нашем блоге </span></a>»</span> </div>
+    <!-- news-main-container --> 
+  </div>
+      
+      <!-- content -->
+      
+      <div class="right-sidebar emerge" data-effect="slide" id="right-sidebar" data-await="projects-container">
+    <div class="private-office-container">
+          <div class="private-office-inner">
+        <div class="authorization">
+              <div class="authorization-form">
+            <div class="title"><span>Ваш личный кабинет</span></div>
+            <div class="login-form">
+                  <form action="#">
+                <input type="text" placeholder="Ваша почта" class="login input-t">
+                <div class="pass-container">
+                      <input type="password" placeholder="Пароль" class="pass input-t">
+                      <a href="#" class="pass-link dotted"><span>Забыли?</span></a></div>
+                <!-- pass-container -->
+                <div class="authoriz-submit-cont">
+                      <input type="submit" value="Войти" class="blue-button authoriz-submit">
+                      <div class="remem-container">
+                    <div class="input-set">
+                          <input type="checkbox" id="remem">
+                        </div>
+                    <label class="label-remem" for="remem">Запомнить</label>
+                  </div>
+                      <!-- remem-container --> 
+                    </div>
+                <!-- authoriz-submit-cont -->
+                <div class="login-social-container"><span>Войти через:</span>
+                      <ul class="login-social">
+                    <!-- соициальные сети идут попорядку с лева на право -->
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                  </ul>
+                      <!-- login-social --> 
+                    </div>
+                <!-- login-social-container -->
+              </form>
+                </div>
+            <!-- login-form --> 
+          </div>
+              <!-- top-authorization -->
+              <div class="why-register-container">
+            <div class="why-register"><a href="" class="close"></a> <span class="title">Зачем мне регистрироваться?</span>
+                  <ul class="why-register-list">
+                <li>Вам будут доступны все сервисы сайта.</li>
+                <li>Вы сможете проходить тесты и просматривать результаты.</li>
+                <li>Сохранять и делиться полезной информацией.</li>
+                <li>Участвовать в проектах и создавать свои собственные!</li>
+                <li>Вы можете вструпить в ДИМСИ или стать партнером!</li>
+              </ul>
+                  <!-- why-register-title -->
+                  <div class="clear"></div>
+                </div>
+            <!-- why-register -->
+            <div class="registration-container"><a href="#"
+                                                           class="red-button registration">Зарегистрироваться</a></div>
+            <!-- registration-container --> 
+            <a href="#" class="why-registr-link dotted"><span>Зачем мне регистрироваться?</span></a></div>
+              <!-- bottom-authorization --> 
+            </div>
+        <!-- authorization --> 
+      </div>
+          <!-- private-office-inner --> 
+        </div>
+    <!-- private-office-container -->
+    <div class="vk-group-container"> 
+          <!-- VK Widget -->
+          <div id="vk_groups"></div>
+          <script>VK.Widgets.Group("vk_groups", {mode:0, width:"210", height:"252", color1:'FFFFFF', color2:'0371ad', color3:'0371ad'}, 761123);</script> 
+        </div>
+    <!-- vk-group-container -->
+    <div class="banner-container"> <a href="#"><img src="img/banner.jpg" alt=""></a></div>
+    <!-- banner-container --> 
+  </div>
+      <!-- right-sidebar --> 
+      
+    </div>
+<!-- content-wrapper --> 
+
+<!-- main-wrapper -->
+
+<div class="footer-wrap" data-effect="slide" id="footer-wrap" data-await="right-sidebar">
+      <div class="footer-centring">
+    <div class="footer-top">
+          <div class="footer-menu-container">
+        <ul class="footer-menu">
+              <li><a href="#">Пройти тест</a></li>
+              <li><a href="#">Новостной блок</a></li>
+              <li><a href="#">Поиск по сайту</a></li>
+              <li><span class="contact-information-footer">Контактная информация</span></li>
+            </ul>
+        <!-- footer-menu --> 
+      </div>
+          <!-- footer-menu-container -->
+          <div class="column first">
+        <ul class="footer-column-menu">
+              <li class="first"><a href="#">О нас</a></li>
+              <li><a href="#">История</a></li>
+              <li><a href="#">Команда</a></li>
+              <li><a href="#">100-летняя программа развития</a></li>
+              <li><a href="#">План на 2013 год.</a></li>
+              <li><a href="#">Партнеры</a></li>
+              <li><a href="#">Вакансии</a></li>
+            </ul>
+        <!-- footer-column-menu --> 
+      </div>
+          <!-- column -->
+          <div class="column">
+        <ul class="footer-column-menu">
+              <li class="first"><a href="#">Проекты ДИМСИ</a></li>
+              <li class="limit-progects"><a href="#">Мативатор24. Lorem ipsum dolor sit amet</a></li>
+              <li class="limit-progects"><a href="#">Город-Бизнес-НКО. Lorem ipsum dolor sit amet</a></li>
+              <li class="limit-progects"><a href="#">Дизайнеры успеха. Lorem ipsum dolor sit amet</a></li>
+              <li class="limit-progects"><a href="#">Семена времени. Lorem ipsum dolor sit amet</a></li>
+              <li class="limit-progects"><a href="#">Молодой карьерист. Lorem ipsum dolor sit amet</a></li>
+              <li class="limit-progects"><a href="#">Все проекты. Lorem ipsum dolor sit amet</a></li>
+            </ul>
+        <!-- footer-column-menu --> 
+      </div>
+          <!-- column -->
+          <div class="column">
+        <ul class="footer-column-menu">
+              <li class="first"><a href="#">Услуги</a></li>
+              <li><a href="#">Свечи</a></li>
+              <li><a href="#">Тренинг или курс</a></li>
+              <li><a href="#">Флешки</a></li>
+              <li><a href="#">Книги</a></li>
+            </ul>
+        <!-- footer-column-menu --> 
+      </div>
+          <!-- column -->
+          <div class="column">
+        <ul class="footer-column-menu">
+              <li class="first"><a href="#">Материалы</a></li>
+              <li><a href="#">Ответы специалистов</a></li>
+              <li><a href="#">Статьи</a></li>
+              <li><a href="#">Видео</a></li>
+              <li><a href="#">Подкасты</a></li>
+            </ul>
+        <!-- footer-column-menu --> 
+      </div>
+          <!-- column -->
+          <div class="column social-container"><span class="title">ДИМСИ в соц. сетях</span>
+        <ul class="social">
+              <li><a href="#"><span>ВКонтакте</span></a></li>
+              <li><a href="#"><span>Фейсбук</span></a></li>
+              <li><a href="#"><span>Твиттер</span></a></li>
+              <li><a href="#"><span>Инстаграм</span></a></li>
+              <li><a href="#"><span>Одноклассники</span></a></li>
+            </ul>
+        <!-- social --> 
+      </div>
+          <!-- column --> 
+        </div>
+    <!-- footer-top -->
+    <div class="footer-bottom"> <span class="copyright">© 2013 Детские и молодежные социальные инициативы (ДИМСИ). Все права защищены.<br>
+      Копирование материалов разрешено только с согласия администратора сайта.</span> <span class="create-site">Создание сайта — <br>
+      <a href="#" class="white"><span>дизайн-студия «Aston»</span></a></span>
+          <div class="clear"></div>
+          <div class="like"><span>Расскажите о нас друзьям:</span>
+        <div class="vk"> 
+              <script> VK.init({apiId:4141621, onlyWidgets:true});</script>
+              <div id="vk_like"></div>
+              <script type="text/javascript"> VK.Widgets.Like("vk_like", {type:"mini"}); </script> 
+            </div>
+        <div class="facebook">
+              <iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;width&amp;layout=button_count&amp;action=like&amp;show_faces=true&amp;share=false&amp;height=21"
+                            scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:21px;"
+                            allowTransparency="true"></iframe>
+            </div>
+        <div class="twitter"><a href="https://twitter.com/share" class="twitter-share-button" data-lang="en">Tweet</a> 
+              <script>!function (d, s, id) {
+                        var js, fjs = d.getElementsByTagName(s)[0];
+                        if (!d.getElementById(id)) {
+                            js = d.createElement(s);
+                            js.id = id;
+                            js.src = "https://platform.twitter.com/widgets.js";
+                            fjs.parentNode.insertBefore(js, fjs);
+                        }
+                    }(document, "script", "twitter-wjs");</script> 
+            </div>
+        <div class="google">
+              <div class="g-plusone" data-size="medium"></div>
+              <script type="text/javascript">
+                        window.___gcfg = {lang:'ru'};
+                        (function () {
+                            var po = document.createElement('script');
+                            po.type = 'text/javascript';
+                            po.async = true;
+                            po.src = 'https://apis.google.com/js/platform.js';
+                            var s = document.getElementsByTagName('script')[0];
+                            s.parentNode.insertBefore(po, s);
+                        })();
+                    </script> 
+            </div>
+        <div class="lj"></div>
+      </div>
+          <!-- like --> 
+        </div>
+    <!-- footer-bottom --> 
+    
+  </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,192 @@
+/**
+ * Default DropKick theme
+ *
+ * Feel free to edit the default theme
+ * or even add your own.
+ *
+ * See the readme for themeing help
+ *
+ */
+.dk_container {
+	font-size: 13px;
+	font-weight: normal;
+	margin-bottom: 18px;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+.dk_container:focus {
+	outline: 0;
+}
+.dk_container a {
+	cursor: pointer;
+	text-decoration: none;
+}
+.dk_toggle {
+	color: #000;
+	padding: 5px 45px 5px 10px;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	position: relative;
+	background-color: rgb(255,255,255);
+	background-color: rgb(255,255,255);
+	/* Firefox v3.5+ */
+	-moz-box-shadow: inset 0px 1px 3px 0px rgba(0,0,0,0.44);
+	/* Safari v3.0+ and by Chrome v0.2+ */
+	-webkit-box-shadow: inset 0px 1px 3px 0px rgba(0,0,0,0.44);
+	/* Firefox v4.0+ , Safari v5.1+ , Chrome v10.0+, IE v10+ and by Opera v10.5+ */
+	box-shadow: inset 0px 1px 3px 0px rgba(0,0,0,0.44);
+	background-image: url(../img/bullet-select.png);
+	background-position: right;
+	background-repeat: no-repeat;
+}
+.dk_toggle:hover {
+	background-color: rgb(247,247,247);
+	/* Firefox v3.5+ */
+	-moz-box-shadow: inset 0px 1px 3px 0px rgba(0,0,0,0.44);
+	/* Safari v3.0+ and by Chrome v0.2+ */
+	-webkit-box-shadow: inset 0px 1px 3px 0px rgba(0,0,0,0.44);
+	/* Firefox v4.0+ , Safari v5.1+ , Chrome v10.0+, IE v10+ and by Opera v10.5+ */
+	box-shadow: inset 0px 1px 3px 0px rgba(0,0,0,0.44);
+}
+.dk_toggle:after {
+	position: absolute;
+	content: '';
+}
+/* Applied when the dropdown is focused */
+.dk_focus .dk_toggle {
+/*background-color: rgb(247,247,247);*/
+	/* Firefox v3.5+ */
+	/*-moz-box-shadow: inset 0px 1px 3px 0px rgba(0,0,0,0.44);*/
+	/* Safari v3.0+ and by Chrome v0.2+ */
+	/*-webkit-box-shadow: inset 0px 1px 3px 0px rgba(0,0,0,0.44);*/
+	/* Firefox v4.0+ , Safari v5.1+ , Chrome v10.0+, IE v10+ and by Opera v10.5+ */
+	/*box-shadow: inset 0px 1px 3px 0px rgba(0,0,0,0.44);*/
+}
+/* Applied whenever the dropdown is open */
+.dk_open {
+	background-color: rgb(247,247,247);
+	/* Firefox v3.5+ */
+	-moz-box-shadow: inset 0px 1px 3px 0px rgba(0,0,0,0.44);
+	/* Safari v3.0+ and by Chrome v0.2+ */
+	-webkit-box-shadow: inset 0px 1px 3px 0px rgba(0,0,0,0.44);
+	/* Firefox v4.0+ , Safari v5.1+ , Chrome v10.0+, IE v10+ and by Opera v10.5+ */
+	box-shadow: inset 0px 1px 3px 0px rgba(0,0,0,0.44);
+	color: #000;
+	/**
+   * Help: Dropdown menu is covered by something
+   * Try setting this value higher
+   */
+	z-index: 10;
+}
+.dk_open .dk_toggle {
+	background-color: #f8f8f8;
+	color: #000;
+	background-image: url(../img/bullet-select-selected.png) !important;
+}
+/* The outer container of the options */
+.dk_options {
+	background: #fff;
+	/* Removes transparent background on iOS5+ scroll */
+	
+}
+.dk_options a {
+	background-color: #fff;
+	padding: 3px 10px;
+	color:#000
+}
+.dk_options a:hover, .dk_options .dk_option_current a {
+	background-color: #095d9b;
+	border-bottom-color: #004c72;
+	color: #fff;
+	text-decoration: none;
+	text-shadow: rgba(0, 0, 0, 0.5) 0 1px 0;
+}
+.dk_options li:last-child a {
+	border-bottom: none;
+}
+.dk_options .disabled {
+	cursor: default;
+}
+.dk_options .disabled a {
+	color: #aaa;
+}
+.dk_options .disabled:hover, .dk_options .disabled:hover a {
+	cursor: default;
+	background-color: #fff;
+	border-bottom-color: #999;
+	text-shadow: none;
+}
+/* Inner container for options, this is what makes the scrollbar possible. */
+.dk_options_inner {
+	max-height: 240px;
+	border: 1px solid #D8D8D8;
+	color: #000;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+/******  End Theme ******/
+/***** Critical to the continued enjoyment of working dropdowns ******/
+.dk_container {
+	display: none;
+	float: left;
+}
+.dk_container a {
+	outline: 0;
+}
+.dk_toggle {
+	display: -moz-inline-stack;
+	display: inline-block;
+ *display: inline;
+	position: relative;
+	zoom: 1;
+}
+.dk_open {
+	position: relative;
+}
+.dk_open .dk_options {
+	display: block;
+}
+.dk_open .dk_label {
+	color: inherit;
+}
+.dk_options {
+	display: none;
+	margin-top: -1px;
+	position: absolute;
+	right: 0;
+	width: 100%;
+}
+.dk_options a, .dk_options a:link, .dk_options a:visited {
+	display: block;
+}
+.dk_options_inner {
+	overflow: auto;
+	position: relative;
+	-webkit-overflow-scrolling: touch;
+}
+/* Hides only dropkick <select> instances */
+.dk_container select {
+	position: absolute;
+	top: -99999em;
+	visibility: hidden;
+}
+/*  nativeMobile override */ 
+.dk_mobile {
+	position: relative;
+}
+.dk_mobile select {
+	display: block;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	visibility: visible;
+	opacity: 0;
+	appearance: none;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+}
+/***** End Critical to the continued enjoyment of working dropdowns ******/

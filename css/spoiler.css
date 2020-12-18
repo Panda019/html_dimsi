@@ -1,0 +1,38 @@
+.block {
+	clear:both;	
+}
+.show {
+	display: none;
+	padding-right: 15px;
+	float: left;
+	background: url(../img/read-more-open.png) no-repeat right 8px;
+	cursor:pointer;
+	
+	
+}
+
+.show span {
+	color:#0074A5;
+	display:block;
+	border-bottom:1px dotted #0074A5;
+}
+.bgcolor .show {display: block; }
+.hide  {
+	display: block;
+	padding-right: 15px;
+	float: left;
+	background: url(../img/read-more-close.png) no-repeat right 8px;
+	cursor:pointer;
+}
+.hide span {
+	color:#0074A5;
+	display:block;
+	border-bottom:1px dotted #0074A5;
+}
+
+
+.bgcolor .hide {display: none;}
+.close .show {display: block;}
+.close .bgcolor .show {display: none;}
+.close .hide  {display: none;}
+.close .bgcolor .hide {display: block;}
